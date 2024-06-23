@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -10,54 +13,82 @@
 
     <div class="hero">
         <img class="cannabis" src="cannabis.jpg" alt="Cannabis plant">
-        <div class="odin"> <img src="odin.png" alt="odin logo"> <span>ODIN</span></div>
+        <div class="odin"> <img src="odin.png" alt="odin logo" width="140px"> <span>ODIN</span></div>
         <div class="credits">Photo by <a href="https://unsplash.com/@iambobnelson?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Robert Nelson</a> on <a href="https://unsplash.com/photos/selective-focus-photography-of-cannabis-sativa-plant--CDNBtuiQYE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
         </div>
     </div>
     <div class="text">
         <h1>This is not a real online service! You know you need something like this in your life to help you
             realize your deepest fears. <br>
-            sign up now to get started
+            sign up now to get started.
         </h1>
         <div class="form">
-            <form action="#" method="post">
+            <form action="#" method="post" id="form">
                 <h1>Let's do this!</h1>
                 <div class="row">
                     <div class="form-control">
                         <label for="first-name">FIRST NAME</label>
-                        <input type="text" name="first-name">
+                        <input type="text" name="first-name" id="first-name" required>
                     </div>
                     <div class="form-control">
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" name="last-name">
+                        <input type="text" name="last-name" id="last-name" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="form-control">
                         <label for="email">EMAIL</label>
-                        <input type="email" name="email">
+                        <input type="email" name="email" id="email" required>
                     </div>
                     <div class="form-control">
                         <label for="number">PHONE NUMBER</label>
-                        <input type="tel" name="number">
+                        <input type="tel" name="number" id="number" required>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="form-control">
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="password">
+                        <input type="password" name="password" id="password" required autocomplete="on">
                     </div>
                     <div class="form-control">
-                        <label for="password">CONFIRM PASSWORD</label>
-                        <input type="password" name="password">
+                        <label for="confirm">CONFIRM PASSWORD</label>
+                        <input type="password" name="confirm" id="confirm" required autocomplete="on">
                     </div>
+                </div>
+
+                <div class="check">
+                    <div class="radio">
+                        <fieldset>
+                            <legend>GENDER</legend>
+                            <input type="radio" name="gender" id="male" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" id="female" value="female">
+                            <label for="female">Female</label>
+                        </fieldset>
+                    </div>
+                    <div class="dropdown">
+                        <label for="body-type">PREFERENCE</label>
+                        <select name="body-type" id="body-type">
+                            <option value="boobs">Boobs</option>
+                            <option value="ass">Ass</option>
+                            <option value="feet">Feet</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="notes">
+                    <label for="notes">NOTES</label>
+                    <textarea name="notes" id="notes" rows="5" cols="55" placeholder="Tell us how can we improve our service!" ></textarea>
+                </div>
+                <div class="notes">
+                    <input type="checkbox" id="newsletter" name="newsletter" value="send-newsletter">
+                    <label for="newsletter">sign-up for our newsletter</label>
                 </div>
             </form>
         </div>
         <div class="button">
-            <button>Create Account</button>
+            <button type="submit" form="form">Create Account</button>
         </div>
         <div class="already">
             <p>Already have an account? <a href="#">Log in</a></p>
