@@ -169,3 +169,30 @@ button {
     color:#ab72e0;
     font-size:1.4rem ;
 }
+
+/* VALIDATION STYLING */
+input + span {
+    position: relative;
+  }
+  
+input:required + span::after {
+font-size: 0.7rem;
+position: absolute;
+content: "Required";
+color: white;
+border-radius: 5px;
+font-weight: 700;
+background-color: black;
+padding: 3px 8px;
+/* manually edit position */
+top: -54px;
+left: 186px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border: solid 1px rgb(201, 127, 235);
+    box-shadow:2px 2px 16px #9b82f7 ;
+}

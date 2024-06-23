@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -23,16 +24,18 @@
             sign up now to get started.
         </h1>
         <div class="form">
-            <form action="#" method="post" id="form">
-                <h1>Let's do this!</h1>
+            <form action="https://httpbin.org/post" method="post" id="form">
+                <h1>Required fields are tagged!</h1>
                 <div class="row">
                     <div class="form-control">
                         <label for="first-name">FIRST NAME</label>
                         <input type="text" name="first-name" id="first-name" required>
+                        <span></span>
                     </div>
                     <div class="form-control">
                         <label for="last-name">LAST NAME</label>
                         <input type="text" name="last-name" id="last-name" required>
+                        <span></span>
                     </div>
                 </div>
 
@@ -40,24 +43,28 @@
                     <div class="form-control">
                         <label for="email">EMAIL</label>
                         <input type="email" name="email" id="email" required>
+                        <span></span>
                     </div>
                     <div class="form-control">
                         <label for="number">PHONE NUMBER</label>
                         <input type="tel" name="number" id="number" required>
+                        <span></span>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="form-control">
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="password" id="password" required autocomplete="on">
+                        <input type="password" name="password" id="password" required autocomplete="on" onkeyup='check();'>
+                        <span id="message"></span>
+                        <span></span>
                     </div>
                     <div class="form-control">
                         <label for="confirm">CONFIRM PASSWORD</label>
-                        <input type="password" name="confirm" id="confirm" required autocomplete="on">
+                        <input type="password" name="confirm" id="confirm" required autocomplete="on" onkeyup='check();'>
+                        <span></span>
                     </div>
                 </div>
-
                 <div class="check">
                     <div class="radio">
                         <fieldset>
